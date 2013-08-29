@@ -1,0 +1,60 @@
+<project name="atd-openoffice" default="all" basedir=".">
+	<property name="project.src"   location="src" />
+	<property name="project.build" location="bin" />
+	<property name="project.path"  value="sleep" />
+
+	<target name="all" depends="init, dist" />
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${project.build}" />
+	</target>
+
+	<path id="classpath.libs">
+		<fileset dir="lib">
+			<include name="*.jar" />
+ 		</fileset>
+	</path>
+
+	<target name="dist" depends="ooo-build" description="Builds one ZIP for both OpenOffice.org and stand-alone use">
+		<zip compress="yes" destfile="atd-openoffice.oxt" basedir="." includes="atd-openoffice.jar,lib/*.jar,description.xml,resources/*.png,META-INF/manifest.xml,dialog/*.x*,description.txt" />
+	</target>
+
+	<target name="ooo-build" depends="compile">
+
+		<mkdir dir="bin/scripts" />
+		<copy file="scripts/webservice.sl" todir="bin/scripts" />
+		<copy file="scripts/atdclient.sl" todir="bin/scripts" />
+
+		<jar jarfile="atd-openoffice.jar" basedir="bin">
+			<manifest>
+				<attribute name="RegistrationClassName" value="com.afterthedeadline.openoffice.CentralRegistrationClass" />
+				<!-- the RegistrationClasses attribute is meaningless as I had to hack the generated RegistrationClass to hardcode these values, they weren't being found in the manifest -->
+				<attribute name="RegistrationClasses" value="com.afterthedeadline.openoffice.Main com.afterthedeadline.openoffice.config.DialogEventHandler" />
+				<attribute name="Implementation-Version" value="0.2" />	
+				<attribute name="Class-Path" value=". ./lib/commons-codec-1.2.jar ./lib/commons-httpclient-3.1.jar ./lib/commons-logging-api.jar ./lib/commons-logging.jar ./lib/jdom.jar ./lib/juh.jar ./lib/jurt.jar ./lib/ridl.jar ./lib/sleep.jar ./lib/unoil.jar ./resource" /> 
+				<attribute name="Uno-Type-Path" value="" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source " >
+		<javac srcdir="${project.src}/"
+			destdir="${project.build}"
+			nowarn="yes"
+			depend="yes"
+			debug="true"
+			optimize="yes">
+			<classpath>
+				<path refid="classpath.libs" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="clean" description="clean up" >
+		<delete dir="${project.build}" />
+		<delete file="atd-openoffice.jar" />
+		<delete file="atd-openoffice.oxt" />
+	</target>
+</project>
+

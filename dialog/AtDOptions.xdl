@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="AtDOptions" dlg:left="123" dlg:top="53" dlg:width="260" dlg:height="185" dlg:closeable="true" dlg:moveable="true" dlg:withtitlebar="false">
+ <dlg:styles>
+  <dlg:style dlg:style-id="0" dlg:font-height="12" dlg:font-weight="150"/>
+ </dlg:styles>
+ <dlg:bulletinboard>
+  <dlg:text dlg:style-id="0" dlg:id="Label1" dlg:tab-index="1" dlg:left="9" dlg:top="7" dlg:width="244" dlg:height="13" dlg:value="Style Checker Options"/>
+  <dlg:text dlg:id="Label2" dlg:tab-index="11" dlg:left="9" dlg:top="20" dlg:width="244" dlg:height="9" dlg:value="After the Deadline can check for the following style issues:"/>
+  <dlg:text dlg:style-id="0" dlg:id="Label3" dlg:tab-index="12" dlg:left="9" dlg:top="135" dlg:width="244" dlg:height="13" dlg:value="Proofreading Service"/>
+  <dlg:text dlg:id="Label4" dlg:tab-index="13" dlg:left="9" dlg:top="148" dlg:width="244" dlg:height="9" dlg:value="Use the following proofreading service (clear this field to reset it):"/>
+  <dlg:textfield dlg:id="service" dlg:tab-index="14" dlg:left="9" dlg:top="161" dlg:width="133" dlg:height="11" dlg:value="https://service.afterthedeadline.com"/>
+  <dlg:checkbox dlg:id="Bias Language" dlg:tab-index="0" dlg:left="9" dlg:top="35" dlg:width="85" dlg:height="9" dlg:value="Biased Language" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Cliches" dlg:tab-index="2" dlg:left="9" dlg:top="44" dlg:width="85" dlg:height="9" dlg:value="Clichés" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Complex Expression" dlg:tab-index="3" dlg:left="9" dlg:top="53" dlg:width="85" dlg:height="9" dlg:value="Complex Phrases" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Diacritical Marks" dlg:tab-index="4" dlg:left="9" dlg:top="62" dlg:width="85" dlg:height="9" dlg:value="Diacritical Marks" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Double Negatives" dlg:tab-index="5" dlg:left="9" dlg:top="71" dlg:width="85" dlg:height="9" dlg:value="Double Negatives" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Hidden Verbs" dlg:tab-index="6" dlg:left="9" dlg:top="80" dlg:width="85" dlg:height="9" dlg:value="Hidden Verbs" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Jargon Language" dlg:tab-index="7" dlg:left="9" dlg:top="89" dlg:width="85" dlg:height="9" dlg:value="Jargon" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Passive voice" dlg:tab-index="8" dlg:left="9" dlg:top="98" dlg:width="85" dlg:height="9" dlg:value="Passive Voice" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Phrases to Avoid" dlg:tab-index="9" dlg:left="9" dlg:top="107" dlg:width="85" dlg:height="9" dlg:value="Phrases to Avoid" dlg:checked="false"/>
+  <dlg:checkbox dlg:id="Redundant Expression" dlg:tab-index="10" dlg:left="9" dlg:top="116" dlg:width="85" dlg:height="9" dlg:value="Redundant Phrases" dlg:checked="false"/>
+ </dlg:bulletinboard>
+</dlg:window>

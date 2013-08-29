@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006" xmlns:d="http://openoffice.org/extensions/description/2006" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<identifier value="com.afterthedeadline.openoffice.oxt" />
+	<display-name>
+		<name lang="en-US">After the Deadline. English grammar checker.</name>
+	</display-name>
+
+	<version value="0.4" />
+
+	<icon>
+		<default xlink:href="resources/icon128.png" />
+	</icon>
+
+	<publisher>
+        	<name xlink:href="http://www.afterthedeadline.com" lang="en">Automattic</name>
+	</publisher>	
+
+	<dependencies>
+		<OpenOffice.org-minimal-version value="3.2.0" d:name="OpenOffice.org 3.2.0" />
+	</dependencies>
+
+	<release-notes>
+		<src xlink:href="CHANGES.txt" lang="en" />
+	</release-notes>
+
+	<update-information>
+		<src xlink:href="http://YOUR_EXGTENSION_HOST/atd-openoffice/release/update.xml" />
+	</update-information>
+</description>
+
+
+
+

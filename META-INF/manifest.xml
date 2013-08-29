@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:manifest>
+	<manifest:file-entry manifest:full-path="atd-openoffice.jar" manifest:media-type="application/vnd.sun.star.uno-component;type=Java" />
+	<manifest:file-entry manifest:full-path="dialog/AtDOptions.xcu" manifest:media-type="application/vnd.sun.star.configuration-data" />
+        <manifest:file-entry manifest:full-path="dialog/menu.xcu" manifest:media-type="application/vnd.sun.star.configuration-data" />
+	<manifest:file-entry manifest:media-type="application/vnd.sun.star.package-bundle-description" manifest:full-path="description.txt"/>
+</manifest:manifest>

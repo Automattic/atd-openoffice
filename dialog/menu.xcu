@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Addons" oor:package="org.openoffice.Office">
+  <node oor:name="AddonUI">
+    <node oor:name="OfficeMenuBarMerging">
+      <node oor:name="org.openoffice.test.testcomponent" oor:op="replace">
+        <node oor:name="S1" oor:op="replace">
+          <prop oor:name="MergePoint">
+            <value>.uno:ToolsMenu\.uno:WordCountDialog</value>
+          </prop>
+          <prop oor:name="MergeCommand">
+            <value>AddBefore</value>
+          </prop>
+          <prop oor:name="MergeFallback">
+            <value>AddPath</value>
+          </prop>
+          <prop oor:name="MergeContext" oor:type="xs:string">
+            <value>com.sun.star.text.TextDocument</value>
+          </prop>
+          <node oor:name="MenuItems">
+            <node oor:name="M0" oor:op="replace">
+              <prop oor:name="Title">
+                <value xml:lang="en-US">Reset Ignored Rules</value>
+              </prop>
+              <prop oor:name="URL" oor:type="xs:string">
+                 <value>service:com.afterthedeadline.openoffice.Main?reset</value>
+              </prop>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>        
+  </node>
+</oor:component-data>
